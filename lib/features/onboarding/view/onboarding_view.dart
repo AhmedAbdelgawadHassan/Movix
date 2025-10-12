@@ -30,7 +30,12 @@ class OnboardingView extends StatelessWidget {
               fontWeight: FontWeight.w500,
             ),
             Gap(40),
-            OnboardingButton(onTap: () =>Navigator.push(context, MaterialPageRoute(builder: (context) =>HomeView(),)) ),
+            OnboardingButton(
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HomeView()),
+              ),
+            ),
           ],
         ),
       ),
