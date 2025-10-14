@@ -18,7 +18,6 @@ class SearchSection extends StatelessWidget {
         Container(
           height: 65,
           padding: EdgeInsets.all(1),
-          margin: EdgeInsets.only(right: 22),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(24),
             gradient: LinearGradient(
