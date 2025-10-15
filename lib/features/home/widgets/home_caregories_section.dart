@@ -11,6 +11,7 @@ class HomeCaregoriesSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        Gap(30),
         Customtext(
           text: 'Categories.',
           fontSize: 20,

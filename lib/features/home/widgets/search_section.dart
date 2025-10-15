@@ -13,6 +13,7 @@ class SearchSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        Gap(25),
         Customtext(text: 'Search for a content', fontSize: 20),
         Gap(15),
         Container(

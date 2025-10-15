@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 import 'package:movix/features/home/widgets/home_caregories_section.dart';
+import 'package:movix/features/home/widgets/most_searched_section.dart';
 import 'package:movix/features/home/widgets/search_section.dart';
 
 class HomeView extends StatelessWidget {
@@ -14,14 +14,19 @@ class HomeView extends StatelessWidget {
         child: Scaffold(
           body: Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Column(
-              children: [
-                Gap(40),
-                SearchSection(),
-                Gap(45),
-                HomeCaregoriesSection()
+            child:CustomScrollView(
+              slivers: [
+                SliverToBoxAdapter(
+                  child: SearchSection(),
+                ),
+                SliverToBoxAdapter(
+                  child: HomeCaregoriesSection(),
+                ),
+                SliverToBoxAdapter(
+                  child: MostSearchedSection(),
+                ),
               ],
-            ),
+            )
           ),
         ),
       ),
