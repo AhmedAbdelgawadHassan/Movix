@@ -26,7 +26,7 @@ class MostSearchedSection extends StatelessWidget {
           itemCount: 20,
           shrinkWrap: true,
           scrollDirection: Axis.horizontal,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,childAspectRatio: 1.4),
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,childAspectRatio: 1.45),
            itemBuilder: (context, index) {
           return   MostsearchedMoviecard(
                     mostsearchedMoviecardModel: MostsearchedMoviecardModel(

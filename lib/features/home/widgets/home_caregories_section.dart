@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:movix/features/home/widgets/movie_card.dart';
+import 'package:movix/features/home/view/anime_view.dart';
+import 'package:movix/features/home/view/movies_view.dart';
+import 'package:movix/features/home/widgets/home_card.dart';
 import 'package:movix/shared/customText.dart';
 
 class HomeCaregoriesSection extends StatelessWidget {
@@ -21,8 +23,10 @@ class HomeCaregoriesSection extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            MovieCard(
-              onTap: () {},
+            HomeCard(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => MoviesView(),));
+              },
               category: 'Movies',
               titles: '532',
               image: 'assets/images/Movies.png',
@@ -35,8 +39,10 @@ class HomeCaregoriesSection extends StatelessWidget {
               leftMargin: 0,
               rightMargin: 70,
             ),
-            MovieCard(
-              onTap: () {},
+            HomeCard(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => AnimeView(),));
+              },
               category: 'Anime',
               titles: '567',
               image: 'assets/images/Anime.png',

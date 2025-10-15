@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:movix/shared/customText.dart';
 
-class MovieCard extends StatelessWidget {
-  const MovieCard({super.key, required this.colorsList, required this.image, required this.category, required this.titles, required this.onTap, required this.leftMargin, required this.rightMargin, required this.crossAxisAlignment});
+class HomeCard extends StatelessWidget {
+  const HomeCard({super.key, required this.colorsList, required this.image, required this.category, required this.titles, required this.onTap, required this.leftMargin, required this.rightMargin, required this.crossAxisAlignment});
   final List<Color> colorsList;
   final String image;
   final String category;
@@ -14,12 +14,12 @@ class MovieCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      clipBehavior: Clip.none,
-      children: [
-        InkWell(
-          onTap: onTap,
-          child: Container(
+    return InkWell(
+      onTap: onTap,
+      child: Stack(
+        clipBehavior: Clip.none,
+        children: [
+          Container(
             padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
             margin: EdgeInsets.symmetric(horizontal: 10),
           width: MediaQuery.of(context).size.width * 0.40, //40% of screen
@@ -41,19 +41,19 @@ class MovieCard extends StatelessWidget {
               ],
             ),
           ),
-        ),
-        Positioned(
-          right: rightMargin,
-          left: leftMargin,
-          top: -60,
-          child: Container(
-            width: 120,
-            height: 220,
-          decoration: BoxDecoration(
-            image: DecorationImage(image: AssetImage(image),)
-          ),
-           ))
-      ],
+          Positioned(
+            right: rightMargin,
+            left: leftMargin,
+            top: -60,
+            child: Container(
+              width: 120,
+              height: 220,
+            decoration: BoxDecoration(
+              image: DecorationImage(image: AssetImage(image),)
+            ),
+             ))
+        ],
+      ),
     );
   }
 }
