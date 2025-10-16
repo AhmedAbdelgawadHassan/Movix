@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:movix/features/home/data/categoriy_movie_card_model.dart';
 import 'package:movix/features/home/widgets/category_movie_card.dart';
 
-class MoviesView extends StatelessWidget {
-  MoviesView({super.key});
+class MoviesCategoriesView extends StatelessWidget {
+  MoviesCategoriesView({super.key});
  List<CategoriyMovieCardModel> moviesList = [
   CategoriyMovieCardModel(movieImage: 'assets/images/movies_cateogries/Action.jpeg', title: 'Action'),
   CategoriyMovieCardModel(movieImage: 'assets/images/movies_cateogries/adventure.jpeg', title: 'Adventure'),

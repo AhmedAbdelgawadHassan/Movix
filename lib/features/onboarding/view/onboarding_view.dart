@@ -32,6 +32,7 @@ class OnboardingView extends StatelessWidget {
             ),
             Gap(40),
             OnboardingButton(
+              text: 'Enter Movix',
               onTap: () => Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => HomeView()),

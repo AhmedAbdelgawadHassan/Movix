@@ -3,8 +3,9 @@ import 'package:movix/core/constants/app_colors.dart';
 import 'package:movix/shared/customText.dart';
 
 class OnboardingButton extends StatelessWidget {
-  const OnboardingButton({super.key, required this.onTap});
+  const OnboardingButton({super.key, required this.onTap, required this.text});
   final VoidCallback onTap;
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -26,8 +27,8 @@ class OnboardingButton extends StatelessWidget {
             color: AppColors.primaryColor, //inside container color
             borderRadius: BorderRadius.circular(20),
           ),
-          child: const Center(
-            child: Customtext(text: 'Enter Movix', fontSize: 17),
+          child:  Center(
+            child: Customtext(text: text, fontSize: 17),
           ),
         ),
       ),
