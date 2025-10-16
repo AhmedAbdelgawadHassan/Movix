@@ -12,6 +12,7 @@ class OnboardingView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.black,
         body: Column(
           mainAxisSize: MainAxisSize.min,
           children: [

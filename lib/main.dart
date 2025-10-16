@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movix/core/constants/app_colors.dart';
-import 'package:movix/features/onboarding/view/onboarding_view.dart';
+import 'package:movix/features/onboarding/view/splash_view.dart';
 
 void main()
 {
@@ -14,7 +14,7 @@ void main()
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OnboardingView(),
+      home: SplashView(),
       theme: ThemeData(
         scaffoldBackgroundColor: AppColors.primaryColor
       ),

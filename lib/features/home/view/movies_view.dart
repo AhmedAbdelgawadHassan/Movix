@@ -26,20 +26,23 @@ class MoviesView extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         // backgroundColor: Colors.white,
-        body: GridView.builder(
-          itemCount: moviesList.length,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            childAspectRatio: 0.6,
+        body: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 10),
+          child: GridView.builder(
+            itemCount: moviesList.length,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              childAspectRatio: 0.6,
+            ),
+            itemBuilder: (context, index) {
+              return Padding(
+                padding: EdgeInsets.all(10),
+                child: CategoryMovieCard(
+                 categoriyMovieCardModel: moviesList[index],
+                ),
+              );
+            },
           ),
-          itemBuilder: (context, index) {
-            return Padding(
-              padding: EdgeInsets.all(10),
-              child: CategoryMovieCard(
-               categoriyMovieCardModel: moviesList[index],
-              ),
-            );
-          },
         ),
       ),
     );

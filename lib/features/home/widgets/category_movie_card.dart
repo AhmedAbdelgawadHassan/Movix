@@ -17,10 +17,11 @@ class CategoryMovieCard extends StatelessWidget {
       borderRadius: BorderRadius.circular(16),
       child: Image.asset(
         categoriyMovieCardModel.movieImage,
-        fit: BoxFit.cover,
+        fit: BoxFit.fill,
+        height: double.infinity,
       ),
     ),
-    // تدرّج في الأسفل
+    // Black Geadient in bottom
     Positioned(
       bottom: 0,
       left: 0,
