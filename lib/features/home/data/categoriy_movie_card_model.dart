@@ -5,3 +5,6 @@ class CategoriyMovieCardModel
 
   CategoriyMovieCardModel({required this.movieImage, required this.title}); 
 }
+
+
+// Static Data

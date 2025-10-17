@@ -10,7 +10,10 @@ class MoviedetailsImage extends StatelessWidget {
               width: double.infinity,
               height: MediaQuery.of(context).size.height * 0.45, // 45% of screen height
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(20),
+                  bottomRight: Radius.circular(20)
+                ),
                 image: DecorationImage(
                   image: AssetImage(movieImage),
                   fit: BoxFit.fill,

@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:movix/features/home/data/categoriy_movie_card_model.dart';
+import 'package:movix/features/home/view/animes_view.dart';
 import 'package:movix/features/home/widgets/category_movie_card.dart';
 
 class AnimeCategoriesView extends StatelessWidget {
@@ -26,25 +27,31 @@ class AnimeCategoriesView extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         // backgroundColor: Colors.white,
-        body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10),
-          child: GridView.builder(
-            itemCount: animeList.length,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              childAspectRatio: 0.6,
+        body:Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: GridView.builder(
+              itemCount: animeList.length,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                childAspectRatio: 0.6,
+              ),
+              itemBuilder: (context, index) {
+                return  GestureDetector(
+                  onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) =>  AnimesView(categoryName: animeList[index].title) )); // Pass the category name to MoviesView to display relevant movies
+                  },
+                  child: Padding(
+                    padding: EdgeInsets.all(10),
+                    child: CategoryMovieCard(
+                      categoriyMovieCardModel: animeList[index],
+                    ),
+                  ),
+                );
+              },
             ),
-            itemBuilder: (context, index) {
-              return Padding(
-                padding: EdgeInsets.all(10),
-                child: CategoryMovieCard(
-                  categoriyMovieCardModel: animeList[index],
-                ),
-              );
-            },
           ),
         ),
-      ),
+      
     );
   }
 }

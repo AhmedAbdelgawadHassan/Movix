@@ -8,7 +8,7 @@ class ActorsGridview extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.builder(
       shrinkWrap: true,
-      itemCount: 4,
+      itemCount: 6,
       physics: const NeverScrollableScrollPhysics(),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
@@ -18,7 +18,7 @@ class ActorsGridview extends StatelessWidget {
       ),
       itemBuilder: (context, index) {
           return Padding(
-            padding: const EdgeInsets.only(left: 50),
+            padding: const EdgeInsets.only(left: 60, ),
             child: ActorCard(
                 actorName: 'Maria Espaes',
                 actorImage: 'assets/images/movie 1.png',

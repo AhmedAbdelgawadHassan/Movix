@@ -31,6 +31,13 @@ class HomeCard extends StatelessWidget {
                 colors: colorsList           
               ),
               borderRadius: BorderRadius.circular(20),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.white,
+                  blurRadius: 10,
+                  offset: Offset(0, 2),
+                )
+              ]
               )
             ,
             child: Column(

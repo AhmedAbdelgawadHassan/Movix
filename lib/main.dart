@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movix/core/constants/app_colors.dart';
-import 'package:movix/features/home/view/movie_details_view.dart';
+import 'package:movix/features/onboarding/view/splash_view.dart';
 
 void main()
 {
@@ -14,9 +14,9 @@ void main()
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MovieDetailsView(),
+      home: SplashView(),
       theme: ThemeData(
-        scaffoldBackgroundColor: AppColors.primaryColor
+        scaffoldBackgroundColor: AppColors.primaryColor  //background color For all Screens
       ),
     );
   }

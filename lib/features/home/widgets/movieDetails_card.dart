@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:movix/features/home/view/watch_Movie_view.dart';
 import 'package:movix/features/home/widgets/actors_gridView.dart';
 import 'package:movix/features/home/widgets/movieDetails_attribute.dart';
 import 'package:movix/features/home/widgets/movieDetails_image.dart';
@@ -39,7 +40,11 @@ class MoviedetailsCard extends StatelessWidget {
               Gap(20),
              ActorsGridview(),
               Gap(20),
-              OnboardingButton(onTap: (){}, text: 'Watch Now'),
+              OnboardingButton(onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context){
+                  return WatchMovieView();
+                }));
+              }, text: 'Watch Now'),
               Gap(20)
             ],
           ),

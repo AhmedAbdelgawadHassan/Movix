@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:movix/features/home/data/categoriy_movie_card_model.dart';
+import 'package:movix/features/home/view/movies_view.dart';
 import 'package:movix/features/home/widgets/category_movie_card.dart';
 
 class MoviesCategoriesView extends StatelessWidget {
@@ -35,10 +36,15 @@ class MoviesCategoriesView extends StatelessWidget {
               childAspectRatio: 0.6,
             ),
             itemBuilder: (context, index) {
-              return Padding(
-                padding: EdgeInsets.all(10),
-                child: CategoryMovieCard(
-                 categoriyMovieCardModel: moviesList[index],
+              return GestureDetector(
+                onTap: () {
+                 Navigator.push(context, MaterialPageRoute(builder: (context) =>  MoviesView(categoryName: moviesList[index].title) )); // Pass the category name to MoviesView to display relevant movies
+                },
+                child: Padding(
+                  padding: EdgeInsets.all(10),
+                  child: CategoryMovieCard(
+                   categoriyMovieCardModel: moviesList[index],
+                  ),
                 ),
               );
             },

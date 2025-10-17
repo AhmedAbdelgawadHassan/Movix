@@ -50,7 +50,7 @@ class ActorCard extends StatelessWidget {
           // actor image
         Positioned(
             top: 0,
-            left:-MediaQuery.of(context).size.width * 0.4/4,// 1/4th of container width
+            left:-MediaQuery.of(context).size.width * 0.4/3-10,// 1/3th of container width
           child: Container(
             padding: const EdgeInsets.all(2),// Border width
             decoration: BoxDecoration(
